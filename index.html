@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Working with Strings</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fafafa;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input {
+            margin-top: 12px;
+            padding: 10px 12px;
+            display: block;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        #output {
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 15px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Basic Information</h1>
+
+<div class="container">
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="input1" placeholder="Enter your name" required>
+
+        <label for="age">Your Age:</label>
+        <input type="number" id="input2" placeholder="Enter your age" min="1" step="1" required>
+
+        <label for="school">Your School:</label>
+        <input type="text" id="input3" placeholder="Enter your school" required>
+
+        <input type="button" value="Generate Message" py-click="sample_function">
+    </form>
+</div>
+
+<div id="output"></div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
